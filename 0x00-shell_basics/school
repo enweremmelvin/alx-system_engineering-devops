@@ -1,0 +1,3 @@
+#!/bin/bash
+0	string SCHOOL This is a school data file
+!:mime text/school
