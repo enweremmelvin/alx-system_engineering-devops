@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# print the time; Format:
+#+ display hours from 0 to 12
+#+ display minutes from 1 to 59
+
+hour=0
+
+while [ $hour -lt 13 ]
+do
+	mins=1
+	echo "Hour: $hour"
+
+	while [ $mins -lt 60 ]
+	do
+		echo "$mins"
+
+		#increment the minutes
+		mins=$((mins + 1))
+	done
+
+	# increment the hour
+	hour=$((hour + 1))
+done
