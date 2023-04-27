@@ -5,5 +5,9 @@
 for file in ./*
 do
 	# print file names
+	#+ first cut pipe trims characters before (including) '-'
+	#+ second cut pipe trims characters before (including) '/'
+	#+ -f2- specifies the second field - the field after a match
+
 	echo "$file" | cut -d '-' -f2- | cut -d '/' -f2-
 done
