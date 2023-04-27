@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# display numbers from 1 - 100
+#+ Displays FizzBuzz when the number is a multiple of 3 and 5
+#+ Displays Fizz when the number is multiple of 3
+#+ Displays Buzz when the number is a multiple of 5
+#+ Otherwise, displays the number
+
+i=1
+
+while [ $i -le 100 ]
+do
+	check_five=$((i % 5))
+	check_three=$((i % 3))
+
+	if [ "$check_five" = 0 ] && [ "$check_three" = 0 ]
+	then
+		echo "FizzBuzz"
+	elif [ "$check_three" = 0 ]
+	then
+		echo "Fizz"
+	elif [ "$check_five" = 0 ]
+	then
+		echo "Buzz"
+	else
+		echo "$i"
+	fi
+
+	#increment the value of i
+	i=$((i + 1))
+done

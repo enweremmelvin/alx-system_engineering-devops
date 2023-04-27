@@ -21,5 +21,5 @@ git push origin master
 echo "-----------------------------------------------------"
 
 echo "-----------------------------------------------------"
-echo "Changes successfully pushed to server!"
+echo "Changes successfully pushed to remote repository!"
 echo "-----------------------------------------------------"
