@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Iterate 10 times and print "Best School"
+#+ for any other iteration except the 9th iteration
+#+ where you print "Hi" instead
+
+i=0
+
+while [ $i -lt 10 ]
+do
+	if [ $i -ne 8 ]
+	then
+	     echo "Best Schoool"
+
+	     # increment i before ignoring the rest of the code
+	     i=$((i + 1))
+	     continue
+	fi
+
+	# print "Hi" if this is the 9th iteration
+	echo "Hi"
+
+	# increment the value of i
+	i=$((i + 1))
+done
