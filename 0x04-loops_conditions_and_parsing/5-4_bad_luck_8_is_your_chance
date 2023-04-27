@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# iterate from 1 to 10
+#+ print "bad luck" on the 4th iteration
+#+ print "good luck" on the 8th iteration
+#+ print "Best School" on the other iterations
+
+i=0
+
+while [ $i -lt 10 ]
+do
+	if [ $i = 3 ]
+	then
+		echo "bad luck"
+	elif [ $i = 7 ]
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+
+	# increment the value of i
+	i=$((i + 1))
+done
