@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Iterate 10 times and print "Best School"
 #+ for any other iteration except the 9th iteration
-#+ where you print "Hi" instead
+#+ where you print "Best School" followed by "Hi" instead
 
 i=0
 
@@ -9,15 +9,20 @@ while [ $i -lt 10 ]
 do
 	if [ $i -ne 8 ]
 	then
-	     echo "Best Schoool"
+	     echo "Best School"
 
 	     # increment i before ignoring the rest of the code
 	     i=$((i + 1))
 	     continue
 	fi
 
-	# print "Hi" if this is the 9th iteration
-	echo "Hi"
+	if [ $i = 8 ]
+	then
+		# print "Best Schol" followed by
+		#+ "Hi" if this is the 9th iteration
+		echo "Best School"
+		echo "Hi"
+	fi
 
 	# increment the value of i
 	i=$((i + 1))
