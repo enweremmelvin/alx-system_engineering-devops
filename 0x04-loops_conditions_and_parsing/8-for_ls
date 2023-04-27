@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# print the contents of the current directory
+#+ print characters in name only after the first "-"
+
+files=$(ls | cut -d '-' -f2-)
+
+echo "$files"
