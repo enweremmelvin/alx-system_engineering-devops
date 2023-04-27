@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# print information regarding a given file (school)
+#+ print "school file does not exist" if file does not exist
+#++ otherwise print "school file exists"
+#+ print "school file is empty" if the file is empty
+#+ print "school file is not empty" if the file is not empty
+#+ print "school is a regular file" if the file is a regular file
+
+file_name="./school"
+
+if [ -e "$file_name" ]
+then
+	echo "school file exists"
+
+	if [ -s "$file_name" ]
+	then
+		echo "school file is not empty"
+	else
+		echo "school file is empty"
+	fi
+
+	if [ -f "$file_name" ]
+	then
+		echo "school file is a regular file"
+	fi
+else
+	echo "school file does not exist"
+fi
