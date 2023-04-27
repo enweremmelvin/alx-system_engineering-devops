@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# print "Best School" 10 times using the until loop
+
+i=0
+
+until [ $i -gt  9 ]
+do
+	# print best school
+	echo "Best School"
+
+	# increment the value of i
+	i=$((i + 1))
+done
