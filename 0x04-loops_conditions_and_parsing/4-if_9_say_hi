@@ -10,10 +10,6 @@ do
 	if [ $i -ne 8 ]
 	then
 	     echo "Best School"
-
-	     # increment i before ignoring the rest of the code
-	     i=$((i + 1))
-	     continue
 	fi
 
 	if [ $i = 8 ]
