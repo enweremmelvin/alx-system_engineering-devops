@@ -10,8 +10,10 @@ file_name="./school"
 
 if [ -e "$file_name" ]
 then
+	# print confirmation that file exists
 	echo "school file exists"
 
+	# condition to check if file is empty
 	if [ -s "$file_name" ]
 	then
 		echo "school file is not empty"
@@ -19,9 +21,10 @@ then
 		echo "school file is empty"
 	fi
 
+	# condition to check if file is a regular file
 	if [ -f "$file_name" ]
 	then
-		echo "school file is a regular file"
+		echo "school is a regular file"
 	fi
 else
 	echo "school file does not exist"
