@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Display "Best School" 10 times using the while loop
+
+i=0
+
+while [ $i -lt 10 ]
+do
+	# increment the value of i
+	i=`expr $i + 1`
+
+	# print "Best School"
+	echo "Best School"
+done
