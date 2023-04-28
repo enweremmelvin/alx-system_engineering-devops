@@ -3,7 +3,10 @@
 
 commit_message=""
 
-read -p "Enter commit message: " commit_message
+read -p "Enter task number: " task_num
+read -p "Enter task title: " task_title
+
+commit_message=`echo "Solution for task $task_num - $task_title"`
 
 echo "Adding all files..."
 echo "-----------------------------------------------------"
