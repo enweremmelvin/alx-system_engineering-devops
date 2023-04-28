@@ -2,4 +2,6 @@
 # display a list of currently running processes
 
 # run the command to get running processes
-ps -u
+process_list=$(ps -u)
+
+echo "$process_list"
