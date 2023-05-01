@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 
-sudo echo "$$" > /var/run/myscript.pid
+# create PID file
+echo "$$" > /var/run/myscript.pid
 
+# handle signal conditions
+trap 'echo "I hate the kill command"' SIGTERM
+trap 'echo "Y U no love me?!"' SIGINT
+trap 'rm /var/run/myscript.pid; kill -15 "$$"' SIGQUIT SIGTERM
+
+# continuoudly display message
 while true
 do
-	echo "To infinity and beyond"
-	trap "echo I hate the kill command" SIGTERM
-	trap "echo Y U no love me?!" SIGINT
-
-	trap "sudo rm /var/run/myscript.pid ; kill $$" SIGQUIT
-	trap "sudo rm /var/run/myscript.pid ; kill $$" SIGTERM
-
-	sleep 2
+    echo "To infinity and beyond"
+    sleep 2
 done
