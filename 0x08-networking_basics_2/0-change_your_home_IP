@@ -5,10 +5,19 @@
 
 file="/etc/hosts"
 
+# create new file (this is the file we will be editing)
 cp "$file" "$file.new"
+
+# find and delete all lines that start with (127) (157)
 sed -i s/^127.*$// "$file.new"
 sed -i s/^157.*$// "$file.new"
+
+# add new custom ip addresses
 echo -ne "127.0.0.2\tlocalhost\n" >> "$file.new"
 echo -ne "8.8.8.8\tfacebook.com\n" >> "$file.new"
+
+# copy the temporary file's contents to the original file
 cp -f "$file.new" "$file"
+
+# remove temporary file
 rm "$file.new"
