@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# this script configures an Ubuntu server with the following requirements:
+#+ localhost resolves to 127.0.0.2
+#+ facebook.com resolves to 8.8.8.8
+
+file="/etc/hosts"
+
+cp "$file" "$file.new"
+sed -i s/^127.*$// "$file.new"
+sed -i s/^157.*$// "$file.new"
+echo -ne "127.0.0.2\tlocalhost\n" >> "$file.new"
+echo -ne "8.8.8.8\tfacebook.com\n" >> "$file.new"
+cp -f "$file.new" "$file"
+rm "$file.new"
